@@ -4,24 +4,19 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static double pay()
+    static double moneyDeposited()
     {
         Scanner input = new Scanner(System.in);
-        double pay = input.nextDouble();
+        double inputMoney = input.nextDouble();
 
         CoffeeMachine money = new CoffeeMachine();
-        money.setPay(pay);
-        return pay;
+        money.setPay(inputMoney);
+        return inputMoney;
     }
 
     public static void main(String[] args)
     {
-        CoffeeMachine coffee = new CoffeeMachine();
-        coffee.textOut();
-        coffee.moneyEnough(pay());
-        
-
-
-
+        CoffeeMachineOn coffeeMachine = new CoffeeMachine();
+        coffeeMachine.startTheCoffeeMachine();
     }
 }
